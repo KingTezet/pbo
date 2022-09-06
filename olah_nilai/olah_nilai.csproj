@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{142AEC6C-3FD0-4063-A2D4-035518B25BD3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>olah_nilai</RootNamespace>
+    <AssemblyName>olah_nilai</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="StarkbankEcdsa, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b2e6337a5d77bfbc, processorArchitecture=MSIL">
+      <HintPath>..\packages\starkbank-ecdsa.1.3.3\lib\net452\StarkbankEcdsa.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin.Designer.cs">
+      <DependentUpon>admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="guru.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="guru.Designer.cs">
+      <DependentUpon>guru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="murid.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="murid.Designer.cs">
+      <DependentUpon>murid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="olah_nilaiDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>olah_nilaiDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="olah_nilaiDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>olah_nilaiDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="siswa.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>siswa.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="siswa.cs">
+      <DependentUpon>siswa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="siswa.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>siswa.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="siswa1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>siswa.tt</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\dataguru.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\dataguru.Designer.cs">
+      <DependentUpon>dataguru.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\datasiswa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\datasiswa.Designer.cs">
+      <DependentUpon>datasiswa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\kelas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\kelas.Designer.cs">
+      <DependentUpon>kelas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\pelajaran.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\pelajaran.Designer.cs">
+      <DependentUpon>pelajaran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User Control\user.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="User Control\user.Designer.cs">
+      <DependentUpon>user.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="admin.resx">
+      <DependentUpon>admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="guru.resx">
+      <DependentUpon>guru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="murid.resx">
+      <DependentUpon>murid.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="User Control\dataguru.resx">
+      <DependentUpon>dataguru.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\datasiswa.resx">
+      <DependentUpon>datasiswa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\kelas.resx">
+      <DependentUpon>kelas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\pelajaran.resx">
+      <DependentUpon>pelajaran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User Control\user.resx">
+      <DependentUpon>user.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="olah_nilaiDataSet.xsc">
+      <DependentUpon>olah_nilaiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="olah_nilaiDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>olah_nilaiDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="olah_nilaiDataSet.xss">
+      <DependentUpon>olah_nilaiDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="olah_nilaiDataSet1.xsc">
+      <DependentUpon>olah_nilaiDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="olah_nilaiDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>olah_nilaiDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="olah_nilaiDataSet1.xss">
+      <DependentUpon>olah_nilaiDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\admin.datasource" />
+    <None Include="Properties\DataSources\Form1.datasource" />
+    <None Include="Properties\DataSources\guru.datasource" />
+    <None Include="Properties\DataSources\murid.datasource" />
+    <None Include="Properties\DataSources\olah_nilai.olah_nilaiDataSet1TableAdapters.siswaTableAdapter.datasource" />
+    <None Include="Properties\DataSources\olah_nilai.olah_nilaiDataSet1TableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\olah_nilai.olah_nilaiDataSet1TableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\olah_nilai.olah_nilaiDataSetTableAdapters.guruTableAdapter.datasource" />
+    <None Include="Properties\DataSources\olah_nilai.olah_nilaiDataSetTableAdapters.TableAdapterManager+UpdateOrderOption.datasource" />
+    <None Include="Properties\DataSources\olah_nilai.olah_nilaiDataSetTableAdapters.TableAdapterManager.datasource" />
+    <None Include="Properties\DataSources\olah_nilai.Properties.Resources.datasource" />
+    <None Include="Properties\DataSources\olah_nilai.Properties.Settings.datasource" />
+    <None Include="Properties\DataSources\olah_nilai.User_Control.dataguru.datasource" />
+    <None Include="Properties\DataSources\olah_nilai.User_Control.datasiswa.datasource" />
+    <None Include="Properties\DataSources\olah_nilai.User_Control.kelas.datasource" />
+    <None Include="Properties\DataSources\olah_nilai.User_Control.pelajaran.datasource" />
+    <None Include="Properties\DataSources\olah_nilai.User_Control.user.datasource" />
+    <None Include="Properties\DataSources\olah_nilaiDataSet.datasource" />
+    <None Include="Properties\DataSources\olah_nilaiDataSet.guruDataTable.datasource" />
+    <None Include="Properties\DataSources\olah_nilaiDataSet.guruRow.datasource" />
+    <None Include="Properties\DataSources\olah_nilaiDataSet.guruRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\olah_nilaiDataSet.guruRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\olah_nilaiDataSet1.datasource" />
+    <None Include="Properties\DataSources\olah_nilaiDataSet1.siswaDataTable.datasource" />
+    <None Include="Properties\DataSources\olah_nilaiDataSet1.siswaRow.datasource" />
+    <None Include="Properties\DataSources\olah_nilaiDataSet1.siswaRowChangeEvent.datasource" />
+    <None Include="Properties\DataSources\olah_nilaiDataSet1.siswaRowChangeEventHandler.datasource" />
+    <None Include="Properties\DataSources\Program.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EntityDeploy Include="siswa.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>siswa.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="siswa.edmx.diagram">
+      <DependentUpon>siswa.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+    <None Include="Resources\login1.png" />
+    <None Include="Resources\user-login-icon-29.png" />
+    <None Include="Resources\WhatsApp_Image_2022-09-06_at_15.27.15-removebg-preview.png" />
+    <None Include="Resources\WhatsApp Image 2022-09-05 at 15.31.32-modified.png" />
+    <None Include="Resources\logo-login-png-1-Transparent-Images.png" />
+    <None Include="Resources\Log-in.png" />
+    <Content Include="siswa.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>siswa.edmx</DependentUpon>
+      <LastGenOutput>siswa.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="siswa.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>siswa.edmx</DependentUpon>
+      <LastGenOutput>siswa1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

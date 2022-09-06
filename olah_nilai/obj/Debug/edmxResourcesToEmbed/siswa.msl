@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="nilaiModelStoreContainer" CdmEntityContainer="nilaiEntities">
+    <EntitySetMapping Name="siswas">
+      <EntityTypeMapping TypeName="nilaiModel.siswa">
+        <MappingFragment StoreEntitySet="siswa">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nisn" ColumnName="nisn" />
+          <ScalarProperty Name="nama" ColumnName="nama" />
+          <ScalarProperty Name="alamat" ColumnName="alamat" />
+          <ScalarProperty Name="kelamin" ColumnName="kelamin" />
+          <ScalarProperty Name="lahir" ColumnName="lahir" />
+          <ScalarProperty Name="tgl" ColumnName="tgl" />
+          <ScalarProperty Name="kelas" ColumnName="kelas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
